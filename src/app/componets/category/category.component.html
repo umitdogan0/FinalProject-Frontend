@@ -1,0 +1,15 @@
+<div class="mb-3">
+  <input type="text" [(ngModel)]="filterText" class="form-control" id="filtertext" placeholder="kategori ismi giriniz">
+</div>
+
+<ul class="list-group">
+  <li
+     class="list-group-item" *ngFor="let category of categories | filterpipeCategory:filterText"
+  >
+    {{ category.categoryName }}
+  </li>
+</ul>
+
+
+
+
